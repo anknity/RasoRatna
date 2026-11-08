@@ -1,0 +1,295 @@
+/* ================= TOPBAR & NAVBAR (Matches Reference Image) ================= */
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-wrapper--scrolled {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Green Topbar */
+.topbar {
+  background-color: #1a3a28;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(155, 222, 74, 0.15);
+}
+
+.topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar__contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s;
+}
+
+.topbar__item:hover {
+  color: #9bde4a;
+}
+
+/* Distinctive Lime Right Pill for Social Icons */
+.topbar__social-pill {
+  background-color: #9bde4a;
+  color: #0d1f17;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 14px;
+  border-radius: 50px;
+}
+
+.topbar__social-pill a {
+  color: #0d1f17;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.topbar__social-pill a:hover {
+  transform: scale(1.18);
+}
+
+/* Main Navigation Bar - Dark Glass Seamless with Hero */
+.main-nav {
+  background: rgba(11, 26, 17, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(155, 222, 74, 0.15);
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-wrapper--scrolled .main-nav {
+  background: rgba(11, 26, 17, 0.96);
+  padding: 10px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.main-nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo__mark {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mark-circle {
+  width: 14px;
+  height: 14px;
+  background-color: #9bde4a;
+  border-radius: 50%;
+}
+
+.mark-bar {
+  width: 4px;
+  height: 18px;
+  background-color: #2d6a4f;
+  border-radius: 2px;
+}
+
+.brand-logo__titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.brand-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #9bde4a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-item {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #9bde4a;
+}
+
+.nav-item--active {
+  color: #9bde4a !important;
+  position: relative;
+}
+
+.nav-item--active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background-color: #9bde4a;
+  border-radius: 2px;
+}
+
+/* Get A Quote Button */
+.btn-get-quote {
+  background-color: #9bde4a;
+  color: #0b1a11;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-get-quote:hover {
+  background-color: #bbf06a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(155, 222, 74, 0.4);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  background-color: #0d1f17;
+  border-bottom: 2px solid #9bde4a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.mobile-drawer__links {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  gap: 16px;
+}
+
+.mobile-nav-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-item:hover {
+  color: #9bde4a;
+}
+
+.btn-get-quote--mobile {
+  text-align: center;
+  margin-top: 10px;
+  background-color: #9bde4a;
+  color: #0b1a11;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+
+@media (max-width: 900px) {
+  .nav-menu { display: none; }
+  .btn-get-quote { display: none; }
+  .nav-mobile-toggle { display: block; }
+  .topbar__item--address { display: none; }
+
+  /* Hide topbar completely on mobile/tablet to match the floating reference */
+  .topbar {
+    display: none !important;
+  }
+
+  .navbar-wrapper {
+    background: transparent;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Protective top-down vignette so daylight in video never bleeds white behind the hamburger */
+  .main-nav {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 14, 9, 0.92) 0%,
+      rgba(6, 14, 9, 0.55) 65%,
+      transparent 100%
+    ) !important;
+    border-bottom: none !important;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .navbar-wrapper--scrolled .main-nav {
+    background: rgba(6, 14, 9, 0.97) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(155, 222, 74, 0.2) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    padding: 12px 0;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  .brand-sub {
+    font-size: 0.62rem;
+    color: #9bde4a;
+  }
+
+  .nav-mobile-toggle {
+    color: #ffffff;
+    padding: 6px;
+  }
+}

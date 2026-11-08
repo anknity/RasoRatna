@@ -1,0 +1,54 @@
+/* ================= MARQUEE TICKER (Matches Reference Image) ================= */
+
+.ticker-band {
+  background-color: #122c1e;
+  overflow: hidden;
+  padding: 16px 0;
+  border-top: 1px solid rgba(155, 222, 74, 0.2);
+  border-bottom: 1px solid rgba(155, 222, 74, 0.2);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ticker-band__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: tickerSlide 45s linear infinite;
+}
+
+.ticker-band__track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-band__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.ticker-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+.ticker-asterisk {
+  color: #9bde4a;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0 4px rgba(155, 222, 74, 0.4));
+}
+
+@keyframes tickerSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}

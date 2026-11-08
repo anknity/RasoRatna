@@ -1,0 +1,162 @@
+/* ======== SHREE RaSo RATNA — Global Styles ======== */
+/* Design: Dark Forest Green + Lime Accent, matches reference */
+
+:root {
+  --green-dark: #0d1f17;
+  --green-deep: #1a3a28;
+  --green-mid: #1e4d35;
+  --green-primary: #2d6a4f;
+  --lime: #9bde4a;
+  --lime-dark: #7ec325;
+  --lime-light: #c5f27a;
+  --white: #ffffff;
+  --off-white: #f4f7f4;
+  --gray-100: #e8ede8;
+  --gray-400: #9aaa9a;
+  --gray-600: #567056;
+  --text-dark: #0d1f17;
+  --text-muted: #6b8f71;
+
+  --font-heading: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-lg: 0 20px 60px rgba(13, 31, 23, 0.3);
+  --shadow-card: 0 4px 24px rgba(13, 31, 23, 0.12);
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ---- Utility classes ---- */
+.container {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3.5vw, 64px);
+  box-sizing: border-box;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: var(--lime);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--lime);
+  color: var(--green-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: var(--lime-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(155, 222, 74, 0.35);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 32px;
+  border: 2px solid var(--lime);
+  color: var(--lime);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--lime);
+  color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--green-dark); }
+::-webkit-scrollbar-thumb { background: var(--lime); border-radius: 3px; }
+
